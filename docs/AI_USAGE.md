@@ -5,7 +5,7 @@
 ## 기본 원칙
 
 - AI는 모든 문서를 자동으로 읽지 않습니다.
-- AI는 `docs/PLAY_REQUEST.md`를 먼저 확인합니다.
+- AI는 `docs/TASK_REQUEST.md`를 먼저 확인합니다.
 - 사용자 요청에 직접 관련된 문서만 추가로 확인합니다.
 - 긴 문서는 전체를 읽기보다 제목, 키워드, 관련 섹션을 먼저 검색합니다.
 - 관련성이 불분명한 문서는 읽기 전에 사용자에게 확인합니다.
@@ -13,28 +13,32 @@
 
 ## 작업 유형별 우선 참조
 
-- 기획 작성/수정: `GDD/Game_GDD.md`
-- 구현 계획 작성: `GDD/Implemention_Plan.md`, `docs/PLANS.md`
-- 코드 구현: `docs/PLAY_REQUEST.md`, 관련 코드, 필요 시 `docs/ARCHITECTURE.md`
-- 버그 수정: 관련 코드, 필요 시 `docs/Verify.md`
+- 기획/설계 작성·수정: `design/PROJECT_BRIEF.md`
+- 구현 계획 작성: `design/IMPLEMENTATION_PLAN.md`, `docs/PLANS.md`
+- 코드 구현: `docs/TASK_REQUEST.md`, 관련 코드, 필요 시 `docs/ARCHITECTURE.md`
+- 셰이더/렌더링 작업: 관련 셰이더·렌더 코드, 필요 시 `docs/ARCHITECTURE.md`, `docs/SPEC.md`
+- 버그 수정: 관련 코드, 필요 시 `docs/VERIFY.md`
+- 성능 최적화: 관련 코드, 프로파일링 결과, `docs/SPEC.md`의 성능 예산
 - 구조 변경: `docs/ARCHITECTURE.md`
-- 게임 규칙/밸런스 변경: `docs/GAME_RULES.md`
-- 검증/테스트: `docs/Verify.md`
+- 사양/규칙 변경 (게임 규칙, 밸런스, 기술 기준): `docs/SPEC.md`
+- 검증/테스트: `docs/VERIFY.md`
 - 완료 이력 확인: 커밋 기록
 - 과거 결정 확인: `docs/DECISIONS.md`
 
 ## 문서 읽기 제한
 
-- `docs/PLAY_REQUEST.md`에 참조 문서가 적혀 있으면 그 문서를 우선합니다.
+- `docs/TASK_REQUEST.md`에 참조 문서가 적혀 있으면 그 문서를 우선합니다.
 - 참조 문서가 없으면 작업 유형별 우선 참조만 확인합니다.
 - 여러 문서를 읽어야 할 것 같으면 먼저 읽을 후보와 이유를 사용자에게 알립니다.
 - 완료 이력이 필요하면 별도 로그 문서보다 커밋 기록을 먼저 확인합니다.
 - 확정 결정만 필요하면 긴 기획 문서보다 `docs/DECISIONS.md`를 먼저 확인합니다.
+- 대용량 에셋, 바이너리, 빌드 산출물, 서드파티 코드는 요청이 없으면 읽지 않습니다.
 
 ## 사용자 확인이 필요한 경우
 
 - 작업 범위가 기획인지 구현인지 불명확할 때
 - 여러 문서를 동시에 수정해야 할 가능성이 있을 때
-- 기존 규칙과 충돌하는 요청일 때
-- 새 시스템, 새 폴더, 새 문서가 필요한 때
+- 기존 규칙·사양과 충돌하는 요청일 때
+- 새 시스템, 새 폴더, 새 문서, 새 외부 라이브러리가 필요한 때
+- 렌더링 파이프라인, 그래픽스 API, 엔진 설정처럼 영향 범위가 큰 변경일 때
 - 요청서에 없는 검증, 결정 기록, 구조 갱신이 필요할 때
