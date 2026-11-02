@@ -1,0 +1,86 @@
+# ==================================================
+# 범용 .gitignore
+# 사용하지 않는 엔진 섹션은 지워도 됩니다.
+# ==================================================
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# ---------- IDE / 에디터 ----------
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+*.opensdf
+*.sdf
+*.code-workspace
+
+# ---------- AI 도구 로컬 설정 ----------
+.claude/settings.local.json
+
+# ---------- C/C++ 빌드 산출물 ----------
+# 서드파티 바이너리를 커밋해야 하면 아래에 예외를 추가합니다. 예: !ThirdParty/**
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+*.so
+*.dylib
+*.a
+*.ipch
+build/
+out/
+cmake-build-*/
+
+# ---------- Unreal Engine ----------
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+*.sln
+.vsconfig
+
+# ---------- Unity ----------
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uild/
+[Bb]uilds/
+*.csproj
+*.unityproj
+*.pidb
+*.booproj
+*.apk
+*.aab
+*.unitypackage
+crashlytics-build.properties
+
+# ---------- Godot ----------
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+
+# ---------- 로그 / 임시 / 캡처 ----------
+*.log
+*.tmp
+*.rdc
+*.ptrace
+*.utrace
