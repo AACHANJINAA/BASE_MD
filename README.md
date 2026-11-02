@@ -24,6 +24,7 @@ docs/
   PLANS.md
   SPEC.md
   VERIFY.md
+  BUILD.md
   DECISIONS.md
 ```
 
@@ -68,6 +69,7 @@ AI 도구는 프로젝트 루트의 `CLAUDE.md`를 자동으로 읽고, 이 흐�
 - `docs/ARCHITECTURE.md`: 폴더, 코드 모듈, 렌더링 파이프라인, 에셋, 씬의 책임 범위를 정리합니다.
 - `docs/SPEC.md`: 동작 사양과 기술 기준을 기록합니다. (게임 규칙·밸런스, 좌표계·색 공간·단위, 성능 예산 등)
 - `docs/VERIFY.md`: 구현 후 확인할 검증 항목과 완료 기준을 정리합니다.
+- `docs/BUILD.md`: 엔진별(Unreal, Unity) 빌드·컴파일·테스트 방법과 빌드 출력을 걸러 토큰을 아끼는 규칙입니다.
 
 ## 프로젝트 유형별 활용
 

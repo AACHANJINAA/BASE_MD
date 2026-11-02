@@ -22,6 +22,7 @@
 - 구조 변경: `docs/ARCHITECTURE.md`
 - 사양/규칙 변경 (게임 규칙, 밸런스, 기술 기준): `docs/SPEC.md`
 - 검증/테스트: `docs/VERIFY.md`
+- 빌드·컴파일·테스트 실행: `docs/BUILD.md`의 해당 엔진 섹션만
 - 완료 이력 확인: 커밋 기록
 - 과거 결정 확인: `docs/DECISIONS.md`
 
